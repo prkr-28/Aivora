@@ -189,7 +189,7 @@ export default function HomePage() {
               </div>
               <p className="text-muted-foreground mb-4">
                 <span className="font-semibold text-foreground">
-                  Ankit Prajapati
+                  Priyanshu Kumar
                 </span>
                 <br />
                 Full-stack developer passionate about building AI-powered
