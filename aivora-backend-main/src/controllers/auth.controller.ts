@@ -75,7 +75,6 @@ export const login = asyncHandler(async (req: AuthRequest, res: Response) => {
   // Generate token
   const token = generateToken(String(user._id));
 
-
   res.json({
     user: {
       id: user._id,

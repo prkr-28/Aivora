@@ -197,7 +197,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://github.com/script-beast"
+                  href="https://github.com/prkr-28"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-3 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors text-sm"
@@ -206,7 +206,7 @@ export default function HomePage() {
                   <span>GitHub</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/aprajapati028/"
+                  href="https://www.linkedin.com/in/prkr28/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-3 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors text-sm"
@@ -221,7 +221,7 @@ export default function HomePage() {
                   <span>LinkedIn</span>
                 </a>
                 <a
-                  href="https://aprajapati.vercel.app/"
+                  href="https://priyanshu-main.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-3 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors text-sm"
@@ -269,7 +269,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <a
-                    href="https://github.com/script-beast/aivora-backend"
+                    href="https://github.com/prkr-28/Aivora"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 px-3 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors text-sm"
@@ -284,8 +284,8 @@ export default function HomePage() {
 
           <div className="text-center mt-8 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Aivora. Built with ❤️ by Ankit
-              Prajapati.
+              © {new Date().getFullYear()} Aivora. Built with ❤️ by Priyanshu
+              Kumar.
             </p>
           </div>
         </div>
