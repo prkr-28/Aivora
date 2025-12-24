@@ -149,7 +149,7 @@ export default function GoalDetailPage({ params }: { params: { id: string } }) {
   const handleDownloadPDF = async () => {
     try {
       setIsDownloading(true);
-      const baseUrl = 'http://localhost:5000/api';
+      const baseUrl = 'https://aivora-a377.onrender.com/api';
       const reportUrl = `${baseUrl}/pdf/goal/${params.id}/report`;
       const token = localStorage.getItem('auth_token');
 

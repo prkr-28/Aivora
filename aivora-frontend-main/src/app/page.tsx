@@ -50,7 +50,7 @@ export default function HomePage() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 container mx-auto px-6 py-6">
+      <nav className="relative z-10 container mx-auto px-6 py-6 border-b border-border">
         <div className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}

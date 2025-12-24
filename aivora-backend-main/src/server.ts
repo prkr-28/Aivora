@@ -22,6 +22,8 @@ dotenv.config();
 // Create Express app
 const app: Application = express();
 
+app.set("trust proxy", 1);
+
 // Middleware
 app.use(helmet());
 app.use(
