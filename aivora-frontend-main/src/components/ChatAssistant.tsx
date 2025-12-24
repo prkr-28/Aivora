@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { MessageCircle, X, Send, Sparkles } from "lucide-react";
+import { X, Send, Brain, BotMessageSquare } from "lucide-react";
 import { supportChatAPI } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,9 +92,7 @@ export function ChatAssistant() {
                         className="rounded-full shadow-2xl flex items-center gap-2 px-5 py-3"
                         onClick={toggleOpen}
                     >
-                        <Sparkles className="w-4 h-4" />
-                        <span className="hidden sm:inline">Need help?</span>
-                        <MessageCircle className="w-5 h-5" />
+                        <BotMessageSquare className="w-7 h-7 animate-pulse" />
                     </Button>
                 </motion.div>
             </div>
@@ -113,7 +111,7 @@ export function ChatAssistant() {
                             <CardHeader className="flex flex-row items-center justify-between py-3 px-4 border-b border-border/60">
                                 <div className="flex items-center gap-2">
                                     <div className="w-8 h-8 rounded-full gradient-glow flex items-center justify-center text-xs font-semibold text-primary-foreground">
-                                        AI
+                                        <Brain className="w-5 h-5" />
                                     </div>
                                     <div>
                                         <CardTitle className="text-base flex items-center gap-1">
@@ -173,9 +171,9 @@ export function ChatAssistant() {
                                     <p className="text-xs text-destructive px-1">{error}</p>
                                 )}
 
-                                <div className="mt-1 flex items-end gap-2">
+                                <div className="mt-1 flex items-center justify-between gap-2">
                                     <textarea
-                                        className="flex-1 resize-none rounded-2xl border bg-background/80 px-3 py-2 text-sm shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 min-h-[40px] max-h-[80px] leading-snug"
+                                        className="flex-1 resize-none rounded-2xl border-[1px] border-sky-400 bg-background/80 px-3 py-2 text-sm shadow-inner focus-visible:outline-none  min-h-[40px] max-h-[80px] leading-snug"
                                         placeholder={
                                             isAuthenticated
                                                 ? "Ask how to use Aivora, improve your routine, or anything about your goals..."
