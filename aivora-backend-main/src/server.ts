@@ -15,6 +15,7 @@ import goalRoutes from "./routes/goal.routes";
 import progressRoutes from "./routes/progress.routes";
 import insightRoutes from "./routes/insight.routes";
 import pdfRoutes from "./routes/pdf.routes";
+import chatRoutes from "./routes/chat.routes";
 
 // Load environment variables
 dotenv.config();
@@ -57,6 +58,7 @@ app.use("/api/goals", goalRoutes);
 app.use("/api/progress", progressRoutes);
 app.use("/api/insights", insightRoutes);
 app.use("/api/pdf", pdfRoutes);
+app.use("/api/chat", chatRoutes);
 
 // 404 handler
 app.use((req, res) => {

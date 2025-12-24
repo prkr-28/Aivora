@@ -206,6 +206,15 @@ class ApiClient {
 
     return response.data;
   }
+
+  // Support chat (Gemini) endpoint
+  async chatWithSupport(data: {
+    message: string;
+    history?: { role: "user" | "assistant"; content: string }[];
+  }) {
+    const response = await this.axiosInstance.post("/chat/support", data);
+    return response.data as { reply: string };
+  }
 }
 
 // Create a single instance
@@ -259,4 +268,9 @@ export const insightAPI = {
 export const pdfAPI = {
   download: (goalId: string) =>
     api.downloadGoalReport(goalId),
+};
+
+export const supportChatAPI = {
+  send: (message: string, history?: { role: "user" | "assistant"; content: string }[]) =>
+    api.chatWithSupport({ message, history }),
 };

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { PageLoader } from "@/components/PageLoader";
 import { AuthInitializer } from "@/components/AuthInitializer";
+import { ChatAssistant } from "@/components/ChatAssistant";
 import { cn } from "@/lib/utils";
 
 const fontSans = Plus_Jakarta_Sans({
@@ -41,6 +42,7 @@ export default function RootLayout({
           <AuthInitializer />
           <PageLoader />
           {children}
+          <ChatAssistant />
         </ThemeProvider>
       </body>
     </html>
