@@ -57,6 +57,7 @@ export function ChatAssistant() {
 
             const assistantMessage: ChatMessage = {
                 role: "assistant",
+
                 content: reply || "I'm here to help with Aivora and your goals.",
             };
 
@@ -105,9 +106,9 @@ export function ChatAssistant() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                        className="fixed bottom-24 right-5 z-40 w-full max-w-sm sm:max-w-md"
+                        className="fixed z-50 inset-x-0 bottom-0 sm:inset-auto sm:bottom-24 sm:right-5 w-full sm:w-[400px]"
                     >
-                        <Card className="glass-card border-border/60 shadow-2xl flex flex-col h-[420px]">
+                        <Card className="glass-card border-border/60 shadow-2xl flex flex-col h-[62dvh] sm:h-[440px] rounded-t-2xl sm:rounded-2xl">
                             <CardHeader className="flex flex-row items-center justify-between py-3 px-4 border-b border-border/60">
                                 <div className="flex items-center gap-2">
                                     <div className="w-8 h-8 rounded-full gradient-glow flex items-center justify-center text-xs font-semibold text-primary-foreground">
