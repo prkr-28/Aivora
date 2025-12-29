@@ -5,12 +5,19 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Link from "next/link";
 import { Brain, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/authStore";
 import { authAPI } from "@/lib/api";
+import { ArrowLeft } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -33,7 +40,11 @@ export default function LoginPage() {
       setUser(user);
       router.push("/dashboard");
     } catch (err: any) {
-      setError(err.response?.data?.error || err.response?.data?.message || "Failed to login. Please try again.");
+      setError(
+        err.response?.data?.error ||
+          err.response?.data?.message ||
+          "Failed to login. Please try again."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -148,7 +159,11 @@ export default function LoginPage() {
                   {isLoading ? (
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                       className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                     />
                   ) : (
@@ -162,8 +177,13 @@ export default function LoginPage() {
             </form>
 
             <div className="mt-6 text-center text-sm">
-              <span className="text-muted-foreground">Don't have an account? </span>
-              <Link href="/register" className="text-primary font-medium hover:underline">
+              <span className="text-muted-foreground">
+                Don't have an account?{" "}
+              </span>
+              <Link
+                href="/register"
+                className="text-primary font-medium hover:underline"
+              >
                 Sign up for free
               </Link>
             </div>
@@ -176,8 +196,11 @@ export default function LoginPage() {
           transition={{ delay: 0.3 }}
           className="text-center mt-6"
         >
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            ← Back to home
+          <Link href="/">
+            <div className="flex items-center justify-center text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <ArrowLeft className="inline-block mr-2 w-4 h-4" />
+              <p>Back to home</p>
+            </div>
           </Link>
         </motion.div>
       </motion.div>
