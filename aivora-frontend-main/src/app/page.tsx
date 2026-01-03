@@ -160,7 +160,18 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className="glass-card rounded-2xl p-8 text-center group cursor-pointer"
+              className="glass-card hover-border-card rounded-2xl p-8 text-center group cursor-pointer"
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+                e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.removeProperty("--mouse-x");
+                e.currentTarget.style.removeProperty("--mouse-y");
+              }}
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6 group-hover:scale-110 transition-transform">
                 <feature.icon className="w-8 h-8 text-primary" />
